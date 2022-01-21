@@ -1,0 +1,8 @@
+E:\C# Fundamentals\Class and Object\Class and Object\bin\Debug\Class and Object.exe.config
+E:\C# Fundamentals\Class and Object\Class and Object\bin\Debug\Class and Object.exe
+E:\C# Fundamentals\Class and Object\Class and Object\bin\Debug\Class and Object.pdb
+E:\C# Fundamentals\Class and Object\Class and Object\obj\Debug\Class and Object.csproj.AssemblyReference.cache
+E:\C# Fundamentals\Class and Object\Class and Object\obj\Debug\Class and Object.csproj.SuggestedBindingRedirects.cache
+E:\C# Fundamentals\Class and Object\Class and Object\obj\Debug\Class and Object.csproj.CoreCompileInputs.cache
+E:\C# Fundamentals\Class and Object\Class and Object\obj\Debug\Class and Object.exe
+E:\C# Fundamentals\Class and Object\Class and Object\obj\Debug\Class and Object.pdb

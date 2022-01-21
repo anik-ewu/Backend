@@ -1,0 +1,8 @@
+E:\C# Fundamentals\variables\variables\obj\Debug\variables.csproj.AssemblyReference.cache
+E:\C# Fundamentals\variables\variables\obj\Debug\variables.csproj.SuggestedBindingRedirects.cache
+E:\C# Fundamentals\variables\variables\obj\Debug\variables.csproj.CoreCompileInputs.cache
+E:\C# Fundamentals\variables\variables\bin\Debug\variables.exe.config
+E:\C# Fundamentals\variables\variables\bin\Debug\variables.exe
+E:\C# Fundamentals\variables\variables\bin\Debug\variables.pdb
+E:\C# Fundamentals\variables\variables\obj\Debug\variables.exe
+E:\C# Fundamentals\variables\variables\obj\Debug\variables.pdb
