@@ -1,0 +1,8 @@
+F:\Backend\Backend\C# Intermediate\LearnClas\bin\Debug\LearnClas.exe.config
+F:\Backend\Backend\C# Intermediate\LearnClas\bin\Debug\LearnClas.exe
+F:\Backend\Backend\C# Intermediate\LearnClas\bin\Debug\LearnClas.pdb
+F:\Backend\Backend\C# Intermediate\LearnClas\obj\Debug\LearnClas.csproj.AssemblyReference.cache
+F:\Backend\Backend\C# Intermediate\LearnClas\obj\Debug\LearnClas.csproj.SuggestedBindingRedirects.cache
+F:\Backend\Backend\C# Intermediate\LearnClas\obj\Debug\LearnClas.csproj.CoreCompileInputs.cache
+F:\Backend\Backend\C# Intermediate\LearnClas\obj\Debug\LearnClas.exe
+F:\Backend\Backend\C# Intermediate\LearnClas\obj\Debug\LearnClas.pdb
