@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "p4D8h9wT/8xeZo1XCzXxCDuQMxrNPltgVrrt3sQryHeqBFVIHk/PoW61B3x73S39IbRcx7ggRDoIBvjo4XP0Zg==",
+  "success": false,
+  "projectFilePath": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://pkgs.dev.azure.com/EcoHub/_packaging/EcoHub-Essential/nuget/v3/index.json.",
+      "libraryId": "Microsoft.AspNetCore.OpenApi"
+    }
+  ]
+}
