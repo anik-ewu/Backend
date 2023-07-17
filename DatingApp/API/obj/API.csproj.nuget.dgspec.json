@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {}
+    "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {
+    "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+        "projectPath": "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\sabbi\\.nuget\\packages\\",
-        "outputPath": "F:\\Backend\\Backend\\DatingApp\\API\\obj\\",
+        "outputPath": "f:\\Backend\\Backend\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sabbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,8 +21,7 @@
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/EcoHub/_packaging/EcoHub-Essential/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -39,6 +38,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
