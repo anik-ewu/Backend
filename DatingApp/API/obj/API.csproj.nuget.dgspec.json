@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {}
+    "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {
+    "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+        "projectPath": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\sabbi\\.nuget\\packages\\",
-        "outputPath": "f:\\Backend\\Backend\\DatingApp\\API\\obj\\",
+        "outputPath": "F:\\Backend\\Backend\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sabbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sabbi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/EcoHub/_packaging/EcoHub-Essential/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -36,18 +36,12 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[7.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -69,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.412\\RuntimeIdentifierGraph.json"
         }
       }
     }
