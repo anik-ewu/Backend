@@ -19,6 +19,7 @@ namespace API.Controllers
         public async Task<ActionResult<AppUser>> Resgister(string userName, string password)
         {
             using var  hmac = new HMACSHA512();
+            // Getting error for null password
             var user = new AppUser
             {
                 UserName = userName,
