@@ -1,2 +1,13 @@
 DatingApp/API/appsettings.Development.json
 DatingApp/API/appsettings.Development.json
+DatingApp/API/datingapp.db-shm
+DatingApp/API/datingapp.db-shm
+DatingApp/API/datingapp.db-wal
+*.dll
+DatingApp/API/bin/Debug/net6.0/API.dll
+*.cache
+*.editorconfig
+*.dll
+*.cache
+*.cache
+*.json
