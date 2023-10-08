@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Backend\\Backend\\DatingApp\\api\\API.csproj": {}
+    "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "F:\\Backend\\Backend\\DatingApp\\api\\API.csproj": {
+    "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Backend\\Backend\\DatingApp\\api\\API.csproj",
+        "projectUniqueName": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "F:\\Backend\\Backend\\DatingApp\\api\\API.csproj",
+        "projectPath": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\sabbi\\.nuget\\packages\\",
-        "outputPath": "F:\\Backend\\Backend\\DatingApp\\api\\obj\\",
+        "outputPath": "F:\\Backend\\Backend\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sabbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,9 +21,9 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/EcoHub/_packaging/EcoHub-Essential/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -41,15 +41,23 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.20, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.20, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[6.0.20, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.32.1, )"
             }
           },
           "imports": [
