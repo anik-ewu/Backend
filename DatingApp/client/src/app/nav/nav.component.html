@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
   <div class="container">
     <a
       class="navbar-brand"
@@ -8,43 +8,42 @@
       >Dating App
     </a>
 
-    <ul
-      class="navbar-nav me-auto mb-2 mb-md-0"
-
-    >
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          aria-current="page"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLink="/members"
-          >Matches
-        </a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLink="/lists"
-          >Lists
-        </a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLink="/messages"
-          >Messages</a
-        >
-      </li>
+    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+      <ng-container *ngIf="accoutService.currentUser$ | async">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/members"
+            >Matches
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/lists"
+            >Lists
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/messages"
+            >Messages</a
+          >
+        </li>
+      </ng-container>
     </ul>
 
-    <div class="dropdown" *ngIf="accoutService.currentUser$ | async" dropdown>
+    <div class="dropdown" *ngIf="(accoutService.currentUser$ | async) as user" dropdown>
       <a class="dropdown-toggle text-decoration-none text-light" dropdownToggle
-        >Welcome User</a
+        >Welcome {{currentUser.userName | titlecase}}</a
       >
       <div class="dropdown-menu" *dropdownMenu>
         <a class="dropdown-item">Edit Profile</a>
@@ -72,7 +71,7 @@
         type="password"
         placeholder="Password"
       />
-      <button class="btn btn-outline-success" type="submit">Login</button>
+      <button class="btn btn-success" type="submit">Login</button>
     </form>
   </div>
 </nav>
