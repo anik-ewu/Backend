@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -13,6 +13,8 @@ import { MemberDetailsComponent } from './members/member-details/member-details.
 import { ListComponent } from './list/list.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SharedModule } from './_module/shared.module';
+import { TestErrorComponent } from './errors/test-error/test-error.component';
+import { ErrorInterceptor } from './_interceptors/error.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { SharedModule } from './_module/shared.module';
     MemberListComponent,
     MemberDetailsComponent,
     ListComponent,
-    MessagesComponent
+    MessagesComponent,
+    TestErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ import { SharedModule } from './_module/shared.module';
     BrowserAnimationsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

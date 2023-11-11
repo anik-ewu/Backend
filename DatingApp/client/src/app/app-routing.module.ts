@@ -6,6 +6,7 @@ import { MemberDetailsComponent } from './members/member-details/member-details.
 import { ListComponent } from './list/list.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { TestErrorComponent } from './errors/test-error/test-error.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'messages', component: MessagesComponent },
     ]
   },
+  {path: 'errors', component: TestErrorComponent},
   { path: '**', component: HomeComponent, pathMatch: 'full' },
 ];
 
