@@ -70,3 +70,4 @@ F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentic
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Data\UserSeedData.json
