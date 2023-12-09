@@ -71,3 +71,5 @@ F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protoc
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Data\UserSeedData.json
+F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\AutoMapper.dll
+F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

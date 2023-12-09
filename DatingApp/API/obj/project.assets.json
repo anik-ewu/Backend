@@ -2027,11 +2027,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+      "projectPath": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\sabbi\\.nuget\\packages\\",
-      "outputPath": "f:\\Backend\\Backend\\DatingApp\\API\\obj\\",
+      "outputPath": "F:\\Backend\\Backend\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sabbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2041,6 +2041,8 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
