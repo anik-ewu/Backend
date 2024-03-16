@@ -73,3 +73,5 @@ F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\System.Diagnostics.DiagnosticS
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Data\UserSeedData.json
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\AutoMapper.dll
 F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\CloudinaryDotNet.dll
+F:\Backend\Backend\DatingApp\API\bin\Debug\net6.0\Newtonsoft.Json.dll
