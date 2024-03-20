@@ -12,3 +12,4 @@ DatingApp/API/bin/Debug/net6.0/API.dll
 *.cache
 *.json
 DatingApp/API/obj/project.assets.json
+DatingApp/API/appsettings.json

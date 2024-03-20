@@ -1,61 +1,87 @@
-<form [formGroup]="registerForm" (ngSubmit)="register()">
+<form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && register()">
   <h1 class="text-center text-primary">Sign up</h1>
   <hr />
 
   <div class="mb-3">
-    <label style="margin-right:10px">I am a:</label>
+    <label style="margin-right: 10px">I am a:</label>
     <label class="form-check-label">
-      <input type="radio" class="form-check-intput" value="male" formControlName="gender">Male
+      <input
+        type="radio"
+        class="form-check-intput"
+        value="male"
+        formControlName="gender"
+      />Male
     </label>
     <label class="form-check-label">
-      <input type="radio" class="form-check-intput ms-3" value="female" formControlName="gender">Female
+      <input
+        type="radio"
+        class="form-check-intput ms-3"
+        value="female"
+        formControlName="gender"
+      />Female
     </label>
   </div>
 
   <app-text-intput
     [formControl]="registerForm.controls['username']"
-    [label]="'Username'">
+    [label]="'Username'"
+  >
   </app-text-intput>
 
   <app-text-intput
     [formControl]="registerForm.controls['knownAs']"
-    [label]="'known As'">
+    [label]="'known As'"
+  >
   </app-text-intput>
 
   <app-date-picker
     [formControl]="registerForm.controls['dateOfBirth']"
     [label]="'Date of birth'"
     [maxDate]="maxDate"
-    >
+  >
   </app-date-picker>
 
   <app-text-intput
     [formControl]="registerForm.controls['city']"
-    [label]="'City'">
+    [label]="'City'"
+  >
   </app-text-intput>
   <app-text-intput
     [formControl]="registerForm.controls['country']"
-    [label]="'Country'">
+    [label]="'Country'"
+  >
   </app-text-intput>
 
   <app-text-intput
     [formControl]="registerForm.controls['password']"
     [label]="'Password'"
     [type]="'password'"
-    >
+  >
   </app-text-intput>
 
   <app-text-intput
     [formControl]="registerForm.controls['confirmPassword']"
     [type]="'password'"
-    [label]="'Confirm Password'">
+    [label]="'Confirm Password'"
+  >
   </app-text-intput>
 
+  <div class="row" *ngIf="validationErrors">
+    <ul class="text-danger">
+      <li *ngFor="let error of validationErrors">
+        {{error}}
+      </li>
+    </ul>
+  </div>
 
   <div class="text-center">
-    <button class="btn btn-success me-2" type="submit">Register</button>
+    <button [disabled]= "!registerForm.valid" class="btn btn-success me-2" type="submit">Register</button>
     <button class="btn btn-default" type="button" (click)="cancel()">
       Cancel
     </button>
   </div>
 </form>
+
+
+<h5>{{registerForm.value | json}}</h5>
+<h5>{{validationErrors | json}}</h5>
