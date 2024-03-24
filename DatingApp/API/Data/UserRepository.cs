@@ -17,25 +17,28 @@ namespace API.Data
         {
             _mapper = mapper;
             _context = context;
-            
+
         }
 
         public async Task<MemberDto> GetMemberAsync(string username)
         {
-           return await _context.Users
-           .Where(x => x.UserName == username)
-           .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
-           .SingleOrDefaultAsync();
+            return await _context.Users
+            .Where(x => x.UserName == username)
+            .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
+            .SingleOrDefaultAsync();
         }
 
         public async Task<PagedList<MemberDto>> GetMembersAsync(UserParam userParams)
         {
-            var query = _context.Users
-                .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
-                .AsNoTracking();
-            
-            return await PagedList<MemberDto>.CreateAsync(query, userParams.PageNumber, userParams.Pagesize);
-            
+            var query = _context.Users.AsQueryable();
+            query = query.Where(u => u.UserName != userParams.CurrentUsername);
+            query = query.Where(u => u.Gender == userParams.Gender);
+
+            return await PagedList<MemberDto>.CreateAsync(
+                query.AsNoTracking().ProjectTo<MemberDto>(_mapper.ConfigurationProvider), 
+                userParams.PageNumber, 
+                userParams.Pagesize);
+
 
         }
 
