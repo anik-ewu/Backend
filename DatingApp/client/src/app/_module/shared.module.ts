@@ -25,6 +25,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
   ],
   exports: [
+    CommonModule,
     BsDropdownModule,
     ToastrModule,
     TabsModule,
@@ -32,7 +33,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     FileUploadModule,
     BsDatepickerModule,
     PaginationModule,
-    ButtonsModule
+    ButtonsModule,
   ]
 })
 export class SharedModule { }

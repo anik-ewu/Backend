@@ -30,6 +30,8 @@ export class MemberDetailsComponent implements OnInit {
     this.memberService.getMember(username).subscribe({
       next: member => {
         this.member = member,
+        member.lastActive = new Date(member.lastActive);
+        member.created = new Date(member.created);
         this.getImages();
       }
     });
