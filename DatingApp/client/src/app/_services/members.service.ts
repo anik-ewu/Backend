@@ -2,9 +2,11 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Member } from '../_models/member';
-import { find, map, of } from 'rxjs';
+import { find, map, of, take } from 'rxjs';
 import { PaginatedResult } from '../_models/pagination';
 import { UserParams } from '../_models/userParams';
+import { AccountService } from './account.service';
+import { User } from '../_models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +16,36 @@ export class MembersService {
   baseUrl = environment.apiUrl;
   members: Member[] = [];
   memberCache = new Map();
+  user: User | undefined;
+  userParams: UserParams | undefined;
 
   constructor(
-    private http: HttpClient
-  ) { }
+    private http: HttpClient,
+    private accountService: AccountService
+  ) {
+    this.accountService.currentUser$.pipe(take(1)).subscribe({
+      next: user => {
+        if (user) {
+          this.userParams = new UserParams(user);
+          this.user = user;
+        }
+      }
+    })
+  }
+
+  getUserParams() {
+    return this.userParams;
+  }
+  setUserParams(params: UserParams) {
+    this.userParams = params;
+  }
+  resetUserParams() {
+    if (this.user) {
+      this.userParams = new UserParams(this.user);
+      return this.userParams;
+    }
+    return;
+  }
 
   getMembers(userParams: UserParams) {
     console.log(Object.values(userParams).join('-'));
@@ -44,8 +72,8 @@ export class MembersService {
   getMember(username: string) {
 
     const member = [...this.memberCache.values()]
-    .reduce((arr, elem) => arr.concat(elem.result), [])
-    .find((member: Member) => member.userName === username);
+      .reduce((arr, elem) => arr.concat(elem.result), [])
+      .find((member: Member) => member.userName === username);
 
     if (member) return of(member);
 
