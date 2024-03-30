@@ -4733,11 +4733,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "F:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
+      "projectPath": "f:\\Backend\\Backend\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\sabbi\\.nuget\\packages\\",
-      "outputPath": "F:\\Backend\\Backend\\DatingApp\\API\\obj\\",
+      "outputPath": "f:\\Backend\\Backend\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sabbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
