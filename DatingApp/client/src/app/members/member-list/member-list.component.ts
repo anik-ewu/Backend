@@ -17,7 +17,7 @@ export class MemberListComponent implements OnInit {
   members: Member[] = [];
   pagination: Pagination | undefined;
   userParams: UserParams | undefined;
-  genderList = [{value: 'male', display: 'Males'}, {value: 'female', display: 'Females'}];
+  genderList = [{ value: 'male', display: 'Males' }, { value: 'female', display: 'Females' }];
 
 
 
@@ -41,7 +41,7 @@ export class MemberListComponent implements OnInit {
           }
         }
       })
-     }
+    }
 
   }
 
@@ -56,6 +56,5 @@ export class MemberListComponent implements OnInit {
       this.memberService.setUserParams(this.userParams);
       this.loadMembers();
     }
-
   }
 }
