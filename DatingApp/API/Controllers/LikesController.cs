@@ -1,12 +1,13 @@
 using API.DTO;
 using API.Entities;
 using API.Extentions;
+using API.Helpers;
 using API.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    public class LikesController: BaseApiController
+    public class LikesController : BaseApiController
     {
         private readonly ILikesRepository _likesRepository;
         private readonly IUserRepository _userRepository;
@@ -19,20 +20,23 @@ namespace API.Controllers
         [HttpPost("{username}")]
         public async Task<ActionResult> AddLike(string username)
         {
-            var sourceUserId = int.Parse(User.GetuserId()) ;
+            var sourceUserId = User.GetuserId();
             var likedUser = await _userRepository.GetUserByUsernameAsync(username);
             var sourceUser = await _likesRepository.GetUserWithLikes(sourceUserId);
 
-            if (likedUser == null) {
+            if (likedUser == null)
+            {
                 return NotFound();
             }
-            if (sourceUser.UserName == username) {
+            if (sourceUser.UserName == username)
+            {
                 return BadRequest("you can not like yourself");
             }
 
             var userLike = await _likesRepository.GetUserLike(sourceUserId, likedUser.Id);
 
-            if (userLike != null) {
+            if (userLike != null)
+            {
                 return BadRequest("you alrady like this user");
             }
 
@@ -50,8 +54,15 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<LikeDto>>> GetUserLikes(string predicate) {
-            var users = await _likesRepository.GetUserLikes(predicate, int.Parse(User.GetuserId()));
+        public async Task<ActionResult<PagedList<LikeDto>>> GetUserLikes([FromQuery]LikesParams likesParams)
+        {
+            likesParams.UserId = User.GetuserId();
+
+            var users = await _likesRepository.GetUserLikes(likesParams);
+
+            Response.AddPaginationHeader(new PaginationHeader(users.CurrentPage, 
+                users.PageSize, users.TotalCount, users.TotalPages));
+
             return Ok(users);
         }
     }
