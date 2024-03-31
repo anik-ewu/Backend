@@ -46,8 +46,8 @@
         class="gallery"
         [items]="images"></gallery>
       </tab>
-      <tab heading="Interests">
-        <p>Messages will go here</p>
+      <tab heading="Messges">
+        <app-member-messages [username]="member.userName"></app-member-messages>
       </tab>
     </tabset>
   </div>
