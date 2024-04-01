@@ -24,13 +24,13 @@
       <div class="card-footer">
         <div class="btn-group d-flex">
           <button class="btn btn-primary">Like</button>
-          <button class="btn btn-success">Message</button>
+          <button (click)="selectTab('Messages')" class="btn btn-success">Message</button>
         </div>
       </div>
     </div>
   </div>
   <div class="col-8">
-    <tabset class="member-tabs" #meberTabs>
+    <tabset class="member-tabs" #memberTabs>
       <tab heading="About {{member.knownAs}}" (selectTab)="onTabActivated($event)">
         <h4>Descriptoin</h4>
         <p>{{member.introduction}}</p>
@@ -46,7 +46,7 @@
         class="gallery"
         [items]="images"></gallery>
       </tab>
-      <tab heading="Messges" (selectTab)="onTabActivated($event)">
+      <tab heading="Messages" (selectTab)="onTabActivated($event)">
         <app-member-messages [messages]="messages" [username]="member.userName"></app-member-messages>
       </tab>
     </tabset>
