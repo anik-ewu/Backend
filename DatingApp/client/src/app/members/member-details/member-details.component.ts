@@ -18,9 +18,9 @@ import { Message } from 'src/app/_models/message';
   imports: [CommonModule, TabsModule, GalleryModule, TimeagoModule, MemberMessagesComponent]
 })
 export class MemberDetailsComponent implements OnInit {
-  @ViewChild('memberTabs', {static: true}) memberTabs?: TabsetComponent;
+  @ViewChild('memberTabs', { static: true }) memberTabs?: TabsetComponent;
   activeTab?: TabDirective;
-  member: Member | undefined;
+  member: Member = {} as Member;
   images: GalleryItem[] = [];
   messages: Message[] = [];
 
@@ -29,13 +29,19 @@ export class MemberDetailsComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.loadMember();
+    this.route.data.subscribe({
+      next: data => {
+        this.member = data['member'];
+      }
+    })
 
     this.route.queryParams.subscribe({
       next: params => {
         params['tab'] && this.selectTab(params['tab'])
       }
     })
+
+    this.getImages();
   }
 
   selectTab(heading: string) {
@@ -58,19 +64,6 @@ export class MemberDetailsComponent implements OnInit {
         next: messages => this.messages = messages
       })
     }
-  }
-
-  loadMember() {
-    var username = this.route.snapshot.paramMap.get('username');
-    if (!username) return;
-    this.memberService.getMember(username).subscribe({
-      next: member => {
-        this.member = member,
-          member.lastActive = new Date(member.lastActive);
-        member.created = new Date(member.created);
-        this.getImages();
-      }
-    });
   }
 
   getImages() {
