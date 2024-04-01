@@ -18,7 +18,7 @@ import { Message } from 'src/app/_models/message';
   imports: [CommonModule, TabsModule, GalleryModule, TimeagoModule, MemberMessagesComponent]
 })
 export class MemberDetailsComponent implements OnInit {
-  @ViewChild('memberTabs') memberTabs?: TabsetComponent;
+  @ViewChild('memberTabs', {static: true}) memberTabs?: TabsetComponent;
   activeTab?: TabDirective;
   member: Member | undefined;
   images: GalleryItem[] = [];
@@ -30,9 +30,16 @@ export class MemberDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadMember();
+
+    this.route.queryParams.subscribe({
+      next: params => {
+        params['tab'] && this.selectTab(params['tab'])
+      }
+    })
   }
 
   selectTab(heading: string) {
+    console.log(heading);
     if (this.memberTabs) {
       this.memberTabs.tabs.find(x => x.heading === heading)!.active = true;
     }

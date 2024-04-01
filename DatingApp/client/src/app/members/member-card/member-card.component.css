@@ -24,7 +24,7 @@
   opacity: 0;
 }
 
-.list-inline-item {
+.list-inline {
   display: flex;
   justify-content: space-around;
 }
