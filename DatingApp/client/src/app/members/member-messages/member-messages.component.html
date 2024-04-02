@@ -21,28 +21,37 @@
                 }}</span>
                 <span
                   class="text-danger"
-                  *ngIf="!message.dateRead
-                  && message.senderUsername != username"
-                >(unread)</span>
+                  *ngIf="
+                    !message.dateRead && message.senderUsername != username
+                  "
+                  >(unread)</span
+                >
                 <span
                   class="text-success"
-                  *ngIf="message.dateRead
-                  && message.senderUsername != username"
-                >(read {{message.dateRead | timeago}})</span>
+                  *ngIf="message.dateRead && message.senderUsername != username"
+                  >(read {{ message.dateRead | timeago }})</span
+                >
               </small>
             </div>
-            <p>{{message.content}}</p>
+            <p>{{ message.content }}</p>
           </div>
         </div>
       </li>
     </ul>
   </div>
   <div class="card-footer">
-    <form>
+    <form #messageForm="ngForm" (ngSubmit)="sendMessage()" autocomplete="off">
       <div class="input-group">
-        <input type="text" class="form-control input-sm" placeholder="Private message">
+        <input
+          name="messageContent"
+          required
+          [(ngModel)]="messageContent"
+          type="text"
+          class="form-control input-sm"
+          placeholder="Private message"
+        />
         <div class="input-group-append">
-          <button class="btn btn-primary" type="submit">Send</button>
+          <button [disabled]="!messageForm.value" class="btn btn-primary" type="submit">Send</button>
         </div>
       </div>
     </form>
