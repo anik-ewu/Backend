@@ -20,8 +20,6 @@ namespace API.Data
                 using var hmc = new HMACSHA512();
 
                 user.UserName = user.UserName.ToLower();
-                user.PasswordHash = hmc.ComputeHash(Encoding.UTF8.GetBytes("Pa$$w0rd"));
-                user.PasswordSalt = hmc.Key;
 
                 context.Users.Add(user);
             }
