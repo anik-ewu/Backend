@@ -6,6 +6,7 @@ using API.Extentions;
 using API.Helpers;
 using API.Interfaces;
 using AutoMapper;
+using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +28,6 @@ namespace API.Controllers
             _userRepository = userRepository;
         }
         
-        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<PagedList<MemberDto>>> GetUsers([FromQuery]UserParam userParams)
         {
@@ -45,7 +45,6 @@ namespace API.Controllers
             return Ok(users);
         }
 
-        
         [HttpGet("{username}")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
