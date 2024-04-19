@@ -33,10 +33,7 @@ namespace API.Controllers
 
             var user = _mapper.Map<AppUser>(registerDto);
 
-            using var hmac = new HMACSHA512();
-
             user.UserName = registerDto.UserName;
-
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
