@@ -25,6 +25,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { TextIntputComponent } from './_forms/text-intput/text-intput.component';
 import { DatePickerComponent } from './_forms/date-picker/date-picker.component';
 import { CommonModule } from '@angular/common';
+import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { CommonModule } from '@angular/common';
     PhotoEditorComponent,
     TextIntputComponent,
     DatePickerComponent,
+    AdminPanelComponent,
   ],
   imports: [
     CommonModule,
