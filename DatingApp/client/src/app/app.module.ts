@@ -26,6 +26,7 @@ import { TextIntputComponent } from './_forms/text-intput/text-intput.component'
 import { DatePickerComponent } from './_forms/date-picker/date-picker.component';
 import { CommonModule } from '@angular/common';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
+import { HasRoleDirective } from './_directives/has-role.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
     TextIntputComponent,
     DatePickerComponent,
     AdminPanelComponent,
+    HasRoleDirective,
   ],
   imports: [
     CommonModule,
